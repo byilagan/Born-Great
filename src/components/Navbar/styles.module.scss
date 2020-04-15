@@ -1,0 +1,30 @@
+.Navbar {
+  min-height: 50px;
+  max-height: 100px;
+  height: 100%;
+  border-bottom: 1px solid darkgrey;
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.MenuButton {
+  width: 21px;
+  margin-left: auto;
+
+  span {
+    display: block;
+    background-color: black;
+    height: 3px;
+    margin: 6px 0px;
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
