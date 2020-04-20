@@ -6,11 +6,27 @@
   display: flex;
   align-items: center;
   padding: 0px 30px;
+
+  > *:first-child {
+    height: 26px;
+    width: 26px;
+    margin-right: auto;
+  }
+
+  p {
+    transition: color 400ms;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .MenuButton {
   width: 21px;
   margin-left: auto;
+  cursor: pointer;
 
   span {
     display: block;
@@ -18,6 +34,7 @@
     height: 3px;
     margin: 6px 0px;
     width: 100%;
+    transition: background-color 400ms;
 
     &:first-child {
       margin-top: 0;
@@ -26,5 +43,126 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.Menu {
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) !important;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: opacity 400ms, visibility 400ms, transform 400ms;
+}
+
+.MenuContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: auto;
+  margin-top: 150px;
+  color: white;
+  width: 80%;
+
+  > * {
+    padding-top: 32px;
+    padding-bottom: 80px;
+
+    &:last-child {
+      padding-left: 24px;
+
+      p {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 8px 0px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+.Categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-right: 1px solid;
+
+  > a {
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      .AnimatedIcon {
+        *:first-child {
+          opacity: 0;
+        }
+
+        *:last-child {
+          opacity: 1;
+        }
+      }
+
+      > p {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  p {
+    margin-left: 8px;
+  }
+}
+
+.MainNav a {
+  color: white;
+  text-decoration: none;
+}
+
+.isOpen {
+  .Menu {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) !important;
+  }
+
+  .MenuButton {
+    z-index: 9999;
+
+    span {
+      background-color: white;
+    }
+  }
+
+  .Navbar p {
+    z-index: 9999;
+    color: white;
+  }
+}
+
+$size: 45px;
+.AnimatedIcon {
+  position: relative;
+  height: $size;
+  width: $size;
+
+  *:last-child {
+    position: absolute;
+    top: 0;
+    width: $size;
+    height: $size;
+    opacity: 0;
   }
 }

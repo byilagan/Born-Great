@@ -1,0 +1,28 @@
+.Hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  background-size: 30% auto;
+  background-blend-mode: lighten;
+}
+
+.HeroText {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+
+  > *:first-child {
+    margin-bottom: 28px;
+  }
+
+  > *:nth-child(2) {
+    margin-bottom: 40px;
+  }
+
+  > *:last-child p {
+    font-size: 24px;
+  }
+}

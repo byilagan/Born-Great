@@ -4,7 +4,9 @@ type TextStyle =
   | "subheader"
   | "quote"
   | "body"
-  | "caption";
+  | "caption"
+  | "brand"
+  | "brand2";
 
 export type TextProps = {
   tag?: string;

@@ -5,9 +5,9 @@ import { FC } from "react";
 // Styles
 import styles from "./styles.module.scss";
 
-const MenuButton: FC<any> = () => {
+const MenuButton: FC<any> = ({ onClick }) => {
   return (
-    <div className={styles.MenuButton}>
+    <div className={styles.MenuButton} onClick={onClick}>
       <span />
       <span />
       <span />

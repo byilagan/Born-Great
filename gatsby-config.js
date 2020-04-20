@@ -30,6 +30,21 @@ module.exports = {
     },
     "gatsby-plugin-typescript",
     "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
+        fonts: [
+          {
+            family: "Playfair Display",
+            variants: ["400", "700", "900"],
+          },
+          {
+            family: "Montserrat",
+            variants: ["300", "500", "700"],
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -7,6 +7,24 @@ $secondary-font: "Montserrat", sans-serif;
   font-size: 72px;
 }
 
+.quote {
+  font-family: $primary-font;
+  font-size: 26px;
+  font-style: italic;
+}
+
+.brand {
+  font-family: $primary-font;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+.brand2 {
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 28px;
+}
+
 .header {
   font-family: $secondary-font;
   font-weight: 700;
@@ -17,13 +35,6 @@ $secondary-font: "Montserrat", sans-serif;
   font-family: $secondary-font;
   font-weight: 500;
   font-size: 28px;
-}
-
-.quote {
-  font-family: $primary-font;
-  font-weight: 700;
-  font-size: 28px;
-  font-style: italic;
 }
 
 .body {
